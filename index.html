@@ -434,12 +434,10 @@
         navContainer.style.display = navContainer.style.display === "flex" ? "none" : "flex";
     });
 
+document.querySelector(".menu-toggle").addEventListener("click", function() {
+    document.querySelector(".nav-container").classList.toggle("show");
+});
 
-        });
-
-        // Close modal when clicking on close button
-        document.querySelector('.close').addEventListener('click', function() {
-            document.getElementById('image-modal').style.display = 'none';
         });
 
         // Close modal when pressing the Escape key
