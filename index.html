@@ -316,7 +316,6 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
             <div class="logo">Xalumni</div>
            <button class="menu-toggle">☰</button>
 <div class="nav-container">
@@ -429,17 +428,13 @@
     </div>
 
     <script>
-        // Handle image click to show modal
-        document.querySelectorAll('.clickable-image').forEach(image => {
-            image.addEventListener('click', function() {
-                const modal = document.getElementById('image-modal');
-                const modalImg = document.getElementById('modal-image');
-                const captionText = document.getElementById('caption');
+      
+    document.querySelector(".menu-toggle").addEventListener("click", function() {
+        const navContainer = document.querySelector(".nav-container");
+        navContainer.style.display = navContainer.style.display === "flex" ? "none" : "flex";
+    });
 
-                modal.style.display = 'block';
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            });
+
         });
 
         // Close modal when clicking on close button
