@@ -12,11 +12,7 @@
             line-height: 1.6;
             background-color: #f9f4f1; /* Light background for the body */
         }
-        .nav-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    
 
 
         header {
@@ -256,19 +252,47 @@
             cursor: pointer;
         }
 
-  @media (max-width: 768px) {
-    .nav-container {
-        display: none; /* Hide the menu on small screens */
-    }
+  /* Default menu style for larger screens */
+.nav-container {
+   display: flex;
+   justify-content: space-around;
+   background-color: #8B0000;
+   padding: 10px;
+}
 
-    .menu-icon {
-        display: block; /* Display the menu icon on small screens */
-    }
+/* Hide the menu on small screens */
+.menu-toggle {
+   display: none;
+}
 
-    .nav-item {
-        margin: 10px 0;
-    }
+/* Mobile menu toggle */
+@media (max-width: 768px) {
+   .nav-container {
+       display: none; /* Hide by default on small screens */
+       flex-direction: column;
+       width: 100%;
+       background-color: #8B0000;
+   }
 
+   .menu-toggle {
+       display: block;
+       background-color: #8B0000;
+       color: white;
+       border: none;
+       padding: 10px;
+       font-size: 20px;
+       cursor: pointer;
+   }
+
+   .nav-item {
+       padding: 10px;
+       text-align: center;
+       border-top: 1px solid #fff;
+   }
+}
+
+
+    
 
 
             .hero p {
@@ -294,13 +318,15 @@
     <header>
         <div class="header-content">
             <div class="logo">Xalumni</div>
-            <nav>
-               <a href="https://xancohs.github.io/home/" class="button">home</a>
-                <a href="http://localhost/old_student_login/login.html" class="button">About</a>
-                 <a href="http://localhost/old_student_login/login.html" class="button">Event</a><br>
-               <br><a href="http://localhost/old_student_login/login.html" class="button">Donation</a>
-                <a href="http://localhost/old_student_login/login.html" class="button">Directory</a>
-            </nav>
+           <button class="menu-toggle">☰</button>
+<div class="nav-container">
+   <a href="#home" class="nav-item">Home</a>
+   <a href="#about" class="nav-item">About</a>
+   <a href="#event" class="nav-item">Event</a>
+   <a href="#donation" class="nav-item">Donation</a>
+   <a href="#directory" class="nav-item">Directory</a>
+</div>
+
         </div>
     </header>
 
