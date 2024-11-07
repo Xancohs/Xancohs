@@ -256,11 +256,15 @@
             cursor: pointer;
         }
 
-      @media (max-width: 768px) {
+  @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
-        align-items: center;
+        display: none; /* Hide the menu on small screens */
     }
+
+    .menu-icon {
+        display: block; /* Display the menu icon on small screens */
+    }
+
     .nav-item {
         margin: 10px 0;
     }
